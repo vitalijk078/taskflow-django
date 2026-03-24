@@ -123,30 +123,31 @@ text
 
 ## Локальный запуск
 
-1. **Клонируйте репозиторий:**
+**Клонируйте репозиторий:**
    ```bash
    git clone https://github.com/Vitalij078/taskflow-django.git
    cd taskflow-django
-Создайте и активируйте виртуальное окружение:
+ ```
+**Создайте и активируйте виртуальное окружение:**
  ```bash
     python -m venv venv
     source venv/bin/activate        # Linux/Mac
     venv\Scripts\activate           # Windows
-    
-Установите зависимости:
+ ```
+**Установите зависимости:**
  ```bash
     pip install -r requirements.txt
-
-Выполните миграции:
+ ```
+**Выполните миграции:**
  ```bash
     python manage.py migrate
-
-Создайте суперпользователя (опционально):
+ ```
+**Создайте суперпользователя:**
  ```bash
     python manage.py createsuperuser
-
-Запустите сервер:
+ ```
+**Запустите сервер:**
  ```bash
     python manage.py runserver
-
-Откройте в браузере: http://127.0.0.1:8000
+ ```
+**Откройте в браузере: http://127.0.0.1:8000**
