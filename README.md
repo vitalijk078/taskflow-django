@@ -151,3 +151,6 @@ text
     python manage.py runserver
  ```
 **Откройте в браузере: http://127.0.0.1:8000**
+
+## Демонстрация
+[![FastPic.Org](https://i127.fastpic.org/thumb/2026/0325/f4/_30c9b24e5a31266cb5d65dbec7e998f4.jpeg)](https://fastpic.org/view/127/2026/0325/_30c9b24e5a31266cb5d65dbec7e998f4.gif.html)
