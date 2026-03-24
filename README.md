@@ -128,25 +128,25 @@ text
    git clone https://github.com/Vitalij078/taskflow-django.git
    cd taskflow-django
 Создайте и активируйте виртуальное окружение:
-bash
-python -m venv venv
-source venv/bin/activate        # Linux/Mac
-venv\Scripts\activate           # Windows
-
+ ```bash
+    python -m venv venv
+    source venv/bin/activate        # Linux/Mac
+    venv\Scripts\activate           # Windows
+    
 Установите зависимости:
-bash
-pip install -r requirements.txt
+ ```bash
+    pip install -r requirements.txt
 
 Выполните миграции:
-bash
-python manage.py migrate
+ ```bash
+    python manage.py migrate
 
 Создайте суперпользователя (опционально):
-bash
-python manage.py createsuperuser
+ ```bash
+    python manage.py createsuperuser
 
 Запустите сервер:
-bash
-python manage.py runserver
+ ```bash
+    python manage.py runserver
 
 Откройте в браузере: http://127.0.0.1:8000
