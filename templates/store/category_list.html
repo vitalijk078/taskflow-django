@@ -1,0 +1,40 @@
+{% extends 'store/base.html' %}
+{% block title %}Категории | TaskFlow{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4 gap-3 flex-wrap">
+    <div>
+        <h1 class="h2 mb-1">Категории задач</h1>
+        <p class="text-muted mb-0">Справочник категорий TaskFlow.</p>
+    </div>
+    <a class="btn btn-primary" href="{% url 'category_add' %}"><i class="bi bi-plus-lg"></i> Добавить категорию</a>
+</div>
+<div class="card rounded-4">
+    <div class="table-responsive">
+        <table class="table align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>#</th>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th class="text-end">Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for category in categories %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td><strong>{{ category.name }}</strong></td>
+                    <td>{{ category.description|default:'—' }}</td>
+                    <td class="text-end">
+                        <a class="btn btn-outline-primary btn-sm" href="{% url 'category_edit' category.id %}">Изменить</a>
+                        <a class="btn btn-outline-danger btn-sm" href="{% url 'category_delete' category.id %}">Удалить</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="4" class="text-center text-muted py-4">Категории пока не созданы.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

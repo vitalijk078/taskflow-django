@@ -1,0 +1,22 @@
+{% extends 'store/base.html' %}
+{% block title %}Удаление категории | TaskFlow{% endblock %}
+{% block content %}
+<div class="row justify-content-center py-5">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card rounded-4">
+            <div class="card-body p-4">
+                <h1 class="h4 mb-3">Удаление категории</h1>
+                <p>Вы действительно хотите удалить категорию <strong>{{ category.name }}</strong>?</p>
+                <p class="text-muted small mb-0">Если к категории привязаны задачи, после удаления связь будет снята.</p>
+                <form method="post" class="mt-4">
+                    {% csrf_token %}
+                    <div class="d-flex gap-2 flex-wrap">
+                        <button class="btn btn-danger" type="submit">Удалить</button>
+                        <a class="btn btn-outline-secondary" href="{% url 'category_list' %}">Отмена</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
